@@ -16,8 +16,7 @@ public class Perito {
     @DBRef
     private Especialidad especialidad;
 
-    public Perito(String id, String nombre, String apellido, Especialidad especialidad) {
-        this.id = id;
+    public Perito(String nombre, String apellido, Especialidad especialidad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.especialidad = especialidad;

@@ -26,9 +26,8 @@ public class Evento {
     private LocalDateTime fechaEvento;
     private String status;
 
-    public Evento(String id, Perito perito, Sede sede, Oficio oficio, TipoDeEventos tipoDeEvento,
+    public Evento( Perito perito, Sede sede, Oficio oficio, TipoDeEventos tipoDeEvento,
             LocalDateTime fechaEvento, String status) {
-        this.id = id;
         this.perito = perito;
         this.sede = sede;
         this.oficio = oficio;

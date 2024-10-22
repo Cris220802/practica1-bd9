@@ -18,9 +18,8 @@ public class EventoYRecursos {
     private BigDecimal dineroPeajes;
     private BigDecimal dineroViaticos;
 
-    public EventoYRecursos(String id, Evento evento, String transporte, BigDecimal dineroPeajes,
+    public EventoYRecursos(Evento evento, String transporte, BigDecimal dineroPeajes,
             BigDecimal dineroViaticos) {
-        this.id = id;
         this.evento = evento;
         this.transporte = transporte;
         this.dineroPeajes = dineroPeajes;

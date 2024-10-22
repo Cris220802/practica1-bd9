@@ -31,6 +31,10 @@ public class Oficio {
         this.sede = sede;
     }
 
+    public Oficio() {
+        
+    }
+
     public String getId() {
         return id;
     }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.practica.eventos.dto.PeritoDTO;
 import com.practica.eventos.model.Perito;
 import com.practica.eventos.service.PeritoService;
 
@@ -36,12 +37,12 @@ public class PeritoController {
     }
 
     @PostMapping
-    public Perito createPerito(@RequestBody Perito perito) {
-        return peritoService.createPerito(perito);
+    public Perito createPerito(@RequestBody PeritoDTO peritoDTO) {
+        return peritoService.createPerito(peritoDTO);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Perito> updatePerito(@PathVariable String id, @RequestBody Perito perito) {
+    public ResponseEntity<Perito> updatePerito(@PathVariable String id, @RequestBody PeritoDTO perito) {
         Perito updatedPerito = peritoService.updatePerito(id, perito);
         if (updatedPerito != null) {
             return ResponseEntity.ok(updatedPerito);

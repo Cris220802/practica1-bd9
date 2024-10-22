@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.practica.eventos.dto.OficioDto;
 import com.practica.eventos.model.Oficio;
 import com.practica.eventos.service.OficioService;
 
@@ -35,12 +36,12 @@ public class OficioController {
     }
 
     @PostMapping
-    public Oficio createOficio(@RequestBody Oficio oficio) {
+    public Oficio createOficio(@RequestBody OficioDto oficio) {
         return oficioService.createOficio(oficio);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Oficio> updateOficio(@PathVariable String id, @RequestBody Oficio oficio) {
+    public ResponseEntity<Oficio> updateOficio(@PathVariable String id, @RequestBody OficioDto oficio) {
         Oficio updatedOficio = oficioService.updateOficio(id, oficio);
         if (updatedOficio != null) {
             return ResponseEntity.ok(updatedOficio);
